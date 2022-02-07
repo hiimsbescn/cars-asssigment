@@ -1,23 +1,4 @@
 const main = document.querySelector(".main-content");
-let cars = [{
-    model: "Hyundai",
-    price: 850,
-    seats: 4,
-    luggage: 2,
-    picture: "/images/budget-car-icon.png",
-}, {
-    model: "Kia",
-    price: 1700,
-    seats: 5,
-    luggage: 4,
-    picture:"/images/suv-icon.png",
-}, {
-    model: "Maserati",
-    price: 2000,
-    seats: 2,
-    luggage: 1,
-    picture:"/images/sport-car-icon.png",
-}]
 
 let filteredCars = cars.filter(function filterFunctions(car) {
     return car.seats > 2;
