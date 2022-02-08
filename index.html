@@ -11,7 +11,7 @@
 
 <body>
     <nav class="prvo-header container">
-        <logo class="logo"><img src="/images/car-rental.png"></logo>
+        <logo class="logo"><img src="images/car-rental.png"></logo>
         <section class="log-in-button">
             <button>Log in</button>
         </section>
@@ -19,34 +19,34 @@
     <header>
         <section class="form-section">
             <h1>Find the car that suits you!</h1>
-            <form action="#" id="search-form">
+            <form action="#" id="searchForm">
                 <div class="row-one">
                     <div>
                         <label for="pickup-time">I pick it up</label>
-                        <input type="date" name="pickup-time" id="">
+                        <input type="date" name="pickupTime" id="">
                     </div>
                     <div>
                         <label for="pick    up-time">I hand it in</label>
-                        <input type="date" name="handin-time" id="">
+                        <input type="date" name="handinTime" id="">
                     </div>
                 </div>
                 <div class="row-two">
                     <div>
                         <label for="pickup-time">Number of people</label>
-                        <input type="number" name="number-of-people" id="">
+                        <input type="number" name="number-of-people" id="numberOfPeople">
                     </div>
                     <div>
                         <label for="pickup-time">Number of suitcases</label>
-                        <select name="number-of-suitcases" id="">
+                        <select name="number-of-suitcases" id="suitcases">
                             <option value="0">0-only a bag</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option value="3">2</option>
-                            <option value="4">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
                         </select>
                     </div>
                 </div>
-                <button class="search-button">Search</button>
+                <button class="search-button" id="searchButton">Search</button>
             </form>
         </section>
     </header>
@@ -88,7 +88,7 @@
             </div>
         </section> -->
     </main>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

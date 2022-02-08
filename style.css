@@ -10,7 +10,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url(/images/pexels-tobi-620335.jpg);
+    background-image: url(images/pexels-tobi-620335.jpg);
     height: 500px;
     background-size: cover;
     background-position: center;
