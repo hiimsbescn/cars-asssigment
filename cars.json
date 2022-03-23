@@ -1,6 +1,6 @@
 [
     {
-        "imageUrl":"./images/alfa.jpeg",
+        "imageUrl":"./images/budget-car-icon.png",
         "name":"Alfa Romeo Guilia",
         "description":"Giulia Quadrifoglio er skabt til at forbedre præstationsevnen. Book en prøvetur her!",
         "price": 7500,
@@ -8,7 +8,7 @@
         "suitcasesFit": 1
     },
     {
-        "imageUrl":"./images/audi.jpeg",
+        "imageUrl":"./images/suv-icon.png",
         "name":"Audi A3",
         "description":"Alt det bedste fra Audi i en kompakt størrelse til både korte byture og ",
         "price":12500,
@@ -16,7 +16,7 @@
         "suitcasesFit": 3
     },
     {
-        "imageUrl":"./images/bmw-f10.jpeg",
+        "imageUrl":"./images/sport-car-icon.png",
         "name":"BMW",
         "description":"The sixth generation of the BMW 5 Series consists of the BMW F10 (sedan version)",
         "price":261500,
