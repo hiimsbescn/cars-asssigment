@@ -1,43 +1,45 @@
-const main = document.querySelector(".main-content");
+(function indexPageIIFE() {
+	const main = document.getElementById("main-content");
+	const form = document.getElementById("search-form");
 
-const searchForm = document.getElementById("searchForm")
+	function carTemplateBuilder({ cars }, predicateFn) {
+		return cars.filter(predicateFn).map(
+			(car) =>
+				`
+				<div class="card text-white bg-dark col p-0 m-2">
+					<img src="${car.imageUrl}" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">${car.name}</h5>
+						<p class="card-text">
+						${car.description}</p>
+						<a href="/accesory.html?name=${car.name}&price=${car.price}" class="btn btn-primary">Book now</a>
+					</div>
+					</div>`
+		);
+	}
 
-const numberOfPeopleInput = document.getElementById("numberOfPeople")
-
-const suitcasesInput = document.getElementById("suitcases")
-
-searchForm.addEventListener('submit', function submitHandler(e) {
-    e.preventDefault();
-    let numberOfPeople = Number(numberOfPeopleInput.value);
-    let suitcases = Number(suitcasesInput.value);
-    let cars = [];
-    fetch('https://raw.githubusercontent.com/hiimsbescn/cars-asssigment/main/cars.json')
-        .then(res => res.json())
-        .then(res => {
-            cars = res;
-
-            let filteredCars = cars.filter(function filterFunctions(car) {
-                return (car.seats >= numberOfPeople) && (car.luggage >= suitcases);
-            });
-            let carBody = '';
-            for (const car of filteredCars) {
-                carBody = carBody + `
-                    <section class="rent-budget">
-                        <img src="${car.picture}" alt="car-icon">
-                        <h3>${car.model}</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                            scrambled it to make a type specimen book.
-                        </p>
-                        <div>
-                            <h3>${car.price} DKK</h3>
-                            <button>Book now</button>
-                        </div>
-                    </section>`;
-            }
-            main.innerHTML = '';
-            main.insertAdjacentHTML('beforeend', carBody);
-        })
-
-});
-
+	form.addEventListener("submit", function submitHandler(event) {
+		event.preventDefault();
+		const numberOfPeople = document.getElementById("people").value;
+		const numberOfSuitcases = document.getElementById("suitcases").value;
+		const pickUpDate = document.getElementById("pickUp").value;
+		const handInDate = document.getElementById("handIn").value;
+		window.localStorage.setItem("handInDate", handInDate);
+		window.localStorage.setItem("pickUpDate", pickUpDate);
+		fetch(
+			"https://raw.githubusercontent.com/dimitur2204/cars-rent-sem2/main/cars.json"
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				main.innerHTML = "";
+				main.innerHTML = carTemplateBuilder(
+					{ cars: data, pickUpDate, handInDate },
+					(car) =>
+						car.seats >= numberOfPeople && car.suitcasesFit >= numberOfSuitcases
+				);
+			})
+			.catch((err) => {
+				main.innerHTML = err.message || err;
+			});
+	});
+})();
