@@ -1,23 +1,26 @@
 [
     {
-        "model": "Hyundai",
-        "price": 850,
-        "seats": 4,
-        "luggage": 2,
-        "picture": "images/budget-car-icon.png"
-    },
-    {
-        "model": "Kia",
-        "price": 1700,
-        "seats": 5,
-        "luggage": 4,
-        "picture": "images/suv-icon.png"
-    },
-    {
-        "model": "Maserati",
-        "price": 2000,
+        "imageUrl":"./images/alfa.jpeg",
+        "name":"Alfa Romeo Guilia",
+        "description":"Giulia Quadrifoglio er skabt til at forbedre præstationsevnen. Book en prøvetur her!",
+        "price": 7500,
         "seats": 2,
-        "luggage": 1,
-        "picture": "images/sport-car-icon.png"
+        "suitcasesFit": 1
+    },
+    {
+        "imageUrl":"./images/audi.jpeg",
+        "name":"Audi A3",
+        "description":"Alt det bedste fra Audi i en kompakt størrelse til både korte byture og ",
+        "price":12500,
+        "seats": 5,
+        "suitcasesFit": 3
+    },
+    {
+        "imageUrl":"./images/bmw-f10.jpeg",
+        "name":"BMW",
+        "description":"The sixth generation of the BMW 5 Series consists of the BMW F10 (sedan version)",
+        "price":261500,
+        "seats": 7,
+        "suitcasesFit": 5
     }
 ]
