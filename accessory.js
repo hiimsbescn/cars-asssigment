@@ -41,7 +41,7 @@
 		window.localStorage.setItem("accessories", JSON.stringify(accList));
 		paramsForNewPage.set("total", total);
 		paramsForNewPage.set("accTotal", accTotal);
-		continueLink.href = `/customer-information.html?${paramsForNewPage.toString()}`;
+		continueLink.href = `customer-information.html?${paramsForNewPage.toString()}`;
 	};
 
 	const checkboxesPricing = {
@@ -77,6 +77,7 @@
 
 	const init = () => {
 		registerListeners();
+		console.log('here')
 		render();
 		renderTotal();
 	};

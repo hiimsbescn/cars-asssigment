@@ -12,7 +12,7 @@
 						<h5 class="card-title">${car.name}</h5>
 						<p class="card-text">
 						${car.description}</p>
-						<a href="/accesory.html?name=${car.name}&price=${car.price}" class="btn btn-primary">Book now</a>
+						<a href="accesory.html?name=${car.name}&price=${car.price}" class="btn btn-primary">Book now</a>
 					</div>
 					</div>`
 		);
