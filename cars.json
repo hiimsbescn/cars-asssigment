@@ -1,24 +1,24 @@
 [
     {
         "imageUrl":"./images/budget-car-icon.png",
-        "name":"Alfa Romeo Guilia",
-        "description":"Giulia Quadrifoglio er skabt til at forbedre præstationsevnen. Book en prøvetur her!",
+        "name":"Hyundai",
+        "description":"Cheap but good car for most of your basic needs.",
         "price": 7500,
         "seats": 2,
         "suitcasesFit": 1
     },
     {
         "imageUrl":"./images/suv-icon.png",
-        "name":"Audi A3",
-        "description":"Alt det bedste fra Audi i en kompakt størrelse til både korte byture og ",
+        "name":"Kia",
+        "description":"Big SUV for nice comfort and stylish ride.",
         "price":12500,
         "seats": 5,
         "suitcasesFit": 3
     },
     {
         "imageUrl":"./images/sport-car-icon.png",
-        "name":"BMW",
-        "description":"The sixth generation of the BMW 5 Series consists of the BMW F10 (sedan version)",
+        "name":"Maserati",
+        "description":"Sport car for all of the adrenaline junkies that want excitement in their life.",
         "price":261500,
         "seats": 7,
         "suitcasesFit": 5

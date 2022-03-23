@@ -27,7 +27,7 @@
 		window.localStorage.setItem("handInDate", handInDate);
 		window.localStorage.setItem("pickUpDate", pickUpDate);
 		fetch(
-			"https://raw.githubusercontent.com/dimitur2204/cars-rent-sem2/main/cars.json"
+			"https://raw.githubusercontent.com/hiimsbescn/cars-asssigment/main/cars.json"
 		)
 			.then((res) => res.json())
 			.then((data) => {
